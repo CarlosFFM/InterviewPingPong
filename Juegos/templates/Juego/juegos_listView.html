@@ -1,0 +1,12 @@
+{% extends "Juego/top.html" %}
+{% block content %}
+{% for s in juegos %}
+<div class="cards">
+    <h2>
+        <a href="{% url 'game_details' s.id %}">
+            <greylink>{{ s }}</greylink>
+        </a>
+    </h2>
+</div>
+{% endfor %}
+{% endblock content %}

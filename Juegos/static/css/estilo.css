@@ -1,0 +1,444 @@
+@font-face {
+    font-family: LetterGothicStd;
+    src: url(LetterGothicStd.otf) format("truetype");
+    }
+    @font-face {
+    font-family: LetterGothicStdBold;
+    src: url(LetterGothicStd-Bold.otf) format("truetype");
+    }
+    @font-face {
+    font-family: LetterGothicStdBoldSlanted;
+    src: url(LetterGothicStd-BoldSlanted.otf) format("truetype");
+    }
+    
+    :root {
+        --letra-normal: LetterGothicStd;
+        --letra-bold: LetterGothicStdBold;
+        --letra-slanted: LetterGothicStdBoldSlanted;
+    }
+    
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+    
+    body{
+        background-color: white;
+        background-repeat: no-repeat;
+    }
+    
+    .contenedor{
+        width: 90%;
+        max-width: 1080px;
+        margin: 0 auto;
+    }
+    
+    h2{
+    color: rgb(204, 39, 39);
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 300;
+    }
+    
+    
+    p{
+    color: #171717;
+    font-size: 1.2rem;
+    }
+    
+    .clearfix{
+        float: none;
+        clear: both;
+    }
+    
+    a{
+        color: crimson;
+    }
+    a:hover{
+        color: #171717;
+        transform: scale(1.2,1.2);
+    }
+    
+    /*NAV*/
+    header{
+        background-image: linear-gradient(to bottom, #ff0844 0%, #d64141 100%);    width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-family: --letra-normal;
+    }
+    .logo{
+        width:150px;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .logo img{
+        width: 100%;
+    }
+    nav{
+        margin-top: 70px;
+        line-height: 52px;
+        margin-right: 50px;
+    }
+    nav ul li{
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.4rem;
+    }
+    nav ul li:last-child{
+        margin-right: 5px;
+    }
+    nav ul li a{
+        display: block;
+        color: white;
+        transition: all .7s ease;
+    }
+    
+    nav ul li a:hover{
+        color: #171717;
+        transform: scale(1.1,1.1);
+    }
+    
+    .tarjetas-promo{
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+    
+    .tarjeta-promo .logo{
+        background-image: linear-gradient(to bottom, #ff0844 0%, #d64141 100%);    
+        width: 70px;
+        border-radius: 40px;
+    }
+    
+    .tarjeta-promo .titulo-promo{
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    
+    .tarjeta-promo .tokens{
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    
+    .pg-canjear{
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    
+    .pg-canjear .cancampa form label{
+        font-size: 1.3rem;
+        color: #171717;
+    
+    }
+    
+    .cancampa{
+        margin: 30px 0;
+        padding: 20px 0;
+    }
+    
+    .cancampa form{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    
+    .cancampa form input{
+        margin: 30px 0;
+        padding: 8px;
+        width: 40%;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+    }
+    .cancampa form input[type="submit"]{
+        cursor: pointer;
+        color: white;
+        background-color: crimson;
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 10px;
+        border-radius: 11px;
+    }
+    
+    .tarjeta-promo{
+        width: 45%;
+        border: 1px solid #e3e3e3;
+        box-shadow: 1px 1px 7px #ccc;
+        margin: 5px auto;
+    }
+    .tarjeta-promo .btn-canjear form{
+        text-align: center;
+    }
+    .tarjeta-promo .btn-canjear form input[type="submit"]{
+        width: 40%;
+        font-size: 1.4rem;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    /*INDEX*/
+    .principal .anuncio{
+        margin: 40px auto;
+        width: 90%;
+    }
+    .principal .anuncio img{
+    width: 100%;
+    
+    }
+    
+    .personal{
+        width: 50%;
+    }
+    
+    .personal .nuestro-equipo a{
+        display: block;
+        text-align: center;
+        width: 70%;
+        margin: 10px auto;
+        background: crimson;
+        padding: 10px;
+    }
+    
+    .agregar-puntos .form-agpuntos{
+        background-color: white;
+    }
+    .dashboard{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    
+    .campana{
+        width: 50%;
+    }
+    
+    .campana .tarjetas-promo{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    
+    .campana .tarjetas-promo .tarjeta-promo{
+        width: 100%;
+    }
+    
+    .agregar-puntos a{
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        background: crimson;
+        padding: 10px;
+    }
+    .agregar-puntos{
+        width: 50%;
+    padding-top: 20px;
+    }
+    
+    .sucursales{
+        width: 50%;
+        padding-top: 20px;
+    }
+    
+    .sucursales a{
+        display: block;
+        text-align: center;
+        width: 70%;
+        margin: 10px auto;
+        background: crimson;
+        padding: 10px;
+    }
+    
+    
+
+    
+
+
+    /*MEDIA QUERIE*/
+    
+    @media screen and (max-width:1040px){
+         .nuestro-equipo .titulo-seccion{
+            margin-bottom: 60px;
+        }
+    
+    
+    }
+    
+    @media screen and (max-width:900px){
+        .servicios .nservicios{
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .servicios .nservicios .servicio{
+            width: 80%;
+            height: 300px;
+        }
+    }
+    
+    @media screen and (max-width:555px){
+        .servicios .nservicios .servicio{
+            height: 400px;
+        }
+    }
+    
+    @media screen and (max-width:555px){
+        .servicios .nservicios .servicio{
+            height: 500px;
+        }
+    }
+    
+    @media screen and (max-width:800px){
+        .tarjetas-promo{
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .tarjeta-promo{
+            width: 80%;
+        }
+    }
+    
+    
+    @media screen and (max-width:525px){
+        .porcentaje{
+            font-size: 20px;
+        }
+    }
+    
+    
+    @media screen and (max-width:750px){
+        .form-crear-user form{
+            display: flex;
+            flex-flow: column wrap;
+            margin: 0 auto;
+        }
+        .form-crear-user form .logform{
+            margin: 0 auto;
+            text-align: center;
+            width: 90%;
+        }
+    }
+    
+    @media screen and (max-width:630px){
+    
+         .nuestro-equipo .equipo .persona-equipo{
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
+        .nuestro-equipo .equipo .persona-equipo .foto{
+            width: 100%;
+        max-width: 275px;
+        }
+    }
+    
+    @media(max-width:911px){
+        .text ul {
+            display: flex;
+            flex-flow: column wrap;
+            text-align: center;
+        }
+    
+        .text ul li{
+            margin-top: 20px;
+        }
+    
+        .text h2{
+            text-align: center;
+        }
+    }
+    
+    
+    
+    @media screen and (max-width:800px){
+        .dashboard{
+            display: flex;
+            flex-flow: column wrap;
+        }
+        .personal{
+            width: 100%;
+        }
+        .campana{
+            width: 100%;
+        }
+        .agregar-puntos{
+            width: 100%;
+            order: 2;
+        }
+        .sucursales{
+            width: 100%;
+        }
+    }
+    
+    
+    @media (max-width:770px){
+    nav ul li a{  
+        font-size: 1.2rem;
+      }
+    
+      .logo{
+          width: 100px;
+      }
+    
+      
+    
+    }
+    
+    @media (max-width:670px){
+        header{
+            display: block;
+        }
+        nav{
+            margin: 0 auto;
+            width: 100%;
+        }
+        nav ul{
+            text-align: center;
+        }
+        nav ul li a{
+            font-size: 1.4rem;
+        }
+        .logo{
+            margin: 10px auto;
+            margin-bottom: 25px;
+        }
+    }
+    
+    
+    
+    
+    @media (max-width:500px){
+        nav ul li a{
+            font-size: 1rem;
+        }
+    
+        .principal .anuncio img{
+            display: none;
+            }
+            .formulario-cajero form .inpts{
+                width: 100%;
+                margin: 0 auto;
+            }
+            .form-cajero h2{
+                font-size: 2.8rem;
+            }
+            .formulario-cajero form input[type="submit"]{
+                width: 100%;
+                margin: 30px auto;
+            }
+    }
+    
+    @media(max-width:400px){
+        nav ul li a{
+            font-size: 0.8rem;
+        }
+    }
