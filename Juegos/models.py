@@ -27,6 +27,5 @@ class Juego(models.Model):
             print("No se guarda")
 
     class Meta:
-        managed = False
         db_table = 'juego'
         verbose_name= 'Juego'
