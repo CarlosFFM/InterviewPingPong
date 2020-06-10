@@ -8,21 +8,21 @@ from .models import *
 from .forms import *
 
 
-def addP1(request, *args, **kwargs):
+def addP(request, *args, **kwargs):
     game = Juego.objects.get(id=kwargs['pk'])
-    game.score1 += 1
+    game.turn += 1
+    if game.turn % 2 > 0:
+        game.serving = int(not bool(game.serving))
+    if kwargs['pl']:
+        game.score2 += 1
+    else:
+        game.score1 += 1
     if (game.score1 - game.score2)**2 >= 4 and (game.score1 > 10 or game.score2 > 10):
         game.finished = 1
-        game.winner = 0
-    game.save()
-    return redirect('game_details', kwargs['pk'])
-
-def addP2(request, *args, **kwargs):
-    game = Juego.objects.get(id=kwargs['pk'])
-    game.score2 += 1
-    if (game.score1 - game.score2)**2 >= 4 and (game.score1 > 10 or game.score2 > 10):
-        game.finished = 1
-        game.winner = 1
+        if kwargs['pl']:
+            game.winner = 1
+        else:
+            game.winner = 0
     game.save()
     return redirect('game_details', kwargs['pk'])
 
