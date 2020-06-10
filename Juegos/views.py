@@ -3,6 +3,7 @@ from django.views.generic import CreateView, ListView, DetailView
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from django.db.models import Count
+from django.contrib import messages
 
 from .models import *
 from .forms import *
@@ -23,6 +24,7 @@ def addP(request, *args, **kwargs):
             game.winner = 1
         else:
             game.winner = 0
+        messages.success(request, "Gana {}".format([game.player1, game.player2][game.winner]))
     game.save()
     return redirect('game_details', kwargs['pk'])
 

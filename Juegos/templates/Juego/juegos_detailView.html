@@ -7,7 +7,7 @@
 <h4>serving: {{ object.player2 }}</h4>
 {% else %}
 <h4>serving: {{ object.player1 }}</h4>
-{% endif%}
+{% endif %}
 
 {% if not object.finished %}
 <h1>-------------</h1>
@@ -20,6 +20,6 @@
     {% csrf_token %}
     <button type='submit'> Add point to player 2 </button>
 </form>
-{% endif%}
 
+{% endif%}
 {% endblock content %}
