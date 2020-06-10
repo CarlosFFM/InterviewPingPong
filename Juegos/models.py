@@ -28,5 +28,5 @@ class Juego(models.Model):
 
     class Meta:
         managed = True
-        db_table = 'juego'
+        db_table = 'Juego'
         verbose_name= 'Juego'
