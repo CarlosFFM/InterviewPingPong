@@ -9,7 +9,7 @@ from .models import *
 from .forms import *
 
 
-def addP(request, *args, **kwargs):
+def add_p(request, *args, **kwargs):
     game = Juego.objects.get(id=kwargs['pk'])
     game.turn += 1
     if game.turn % 2 > 0:
@@ -62,7 +62,6 @@ class Leaderboard(ListView):
 
     # leave it like that in case further changes are necessary
     def get_queryset(self):
-        lista_jugadores = get_user_model().objects.filter(is_active = True)
         juegos = Juego.objects.filter(finished=1).values()
         jugadores = dict()
         for i in juegos:
