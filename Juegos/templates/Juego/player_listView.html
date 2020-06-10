@@ -1,0 +1,11 @@
+{% extends "Juego/top.html" %}
+{% block content %}
+<h4>player: wins:</h4>
+{% for player, wins in jugadores.items %}
+<div class="cards">
+    <h2>
+        <h4>{{ player }} {{ wins }}</h4>
+    </h2>
+</div>
+{% endfor %}
+{% endblock content %}
