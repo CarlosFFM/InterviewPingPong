@@ -49,13 +49,6 @@ class GameCreationView(CreateView):
     template_name = 'Juego/juegos_createView.html'
     form_class = JuegoCreationForm
 
-    def get_initial(self, *args, **kwargs):
-        initial = super(GameCreationView, self).get_initial()
-        initial = initial.copy()
-        # shouldn't be done like this, but I am short on time, should have a placeholder user
-        initial['winner'] = User.objects.get(id = 1)
-        return initial
-
 class PlayerCreationView(CreateView):
     model = get_user_model()
     template_name = 'Juego/player_createView.html'
